@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class ColorizedButton extends StatelessWidget {
@@ -7,13 +8,15 @@ class ColorizedButton extends StatelessWidget {
   final double width;
   final bool rounded;
 
-  ColorizedButton({required this.text, required this.color, this.height = 0, this.width = 0,  this.rounded = false});
+  const ColorizedButton({super.key, required this.text, required this.color, this.height = 0, this.width = 0,  this.rounded = false});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        print('clicked');
+        if (kDebugMode) {
+          print('clicked');
+        }
       },
       child: Ink(
         width: width,

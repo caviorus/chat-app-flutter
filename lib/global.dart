@@ -26,4 +26,13 @@ class AppColor {
   static Color primary = const Color(0xFF6B4EFF);
 
   static Color black = const Color(0xFF0A121A);
+  static Color white = Colors.white;
+}
+
+class AppRouter {
+  Future<void> pushedIn(context, destination, {Duration duration = const Duration(seconds: 1)}) async {
+    await Future.delayed(duration);
+
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => destination));
+  }
 }

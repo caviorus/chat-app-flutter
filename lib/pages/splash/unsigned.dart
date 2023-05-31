@@ -21,7 +21,7 @@ class _UnsignedState extends State<Unsigned> {
         backgroundColor: Colors.transparent,
         shadowColor: Colors.transparent,
       ),
-      body: Container(
+      body: SizedBox(
         width: AppScreen(context).screenWidth,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
